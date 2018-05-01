@@ -164,3 +164,6 @@ mv.addObject("member",returnMember);
 mv.setViewName("home");
 는 member라는 이름으로 returnmember을
 home으로 보낸다는뜻이다.
+
+<property name="dataSource" ref="dataSource">
+name은 아무거나 적어도되지만 ref는 아이디를 적어줘야한다.
