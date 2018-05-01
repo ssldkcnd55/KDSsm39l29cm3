@@ -135,3 +135,32 @@ implements java.io.Serializable(직렬화) 꼭 해주어야한다. 나중에 이
 스프링에서는 메소드의 매개변수로 클래스명 레퍼런스 변수 선언하면 자동으로 해당클래스에 대한 객체 생성이 된다
 (new 생성자())
 
+컨트롤러에서 @Controller을 적어주면
+디스페쳐서블릿 bean에 자동등록해준다.
+
+컨트롤러를 만들고 나서
+@RequestMapping("login.do") 이런식으로 적어준다.
+이런식도 가능하다 = @RequestMapping(value = "login.do", method = RequestMethod.GET)
+@RequestMapping(value = "login.do", method = RequestMethod.POST)
+
+mv.setViewName("home");라고 쓰면
+home으로 보낸다는 뜻이다.
+
+핸들러매핑은 디스패처 서블릿에 들어있다.
+.do라고 붙어있는 이름이 오면 핸들러매핑이 진짜이름과 비교 해서 연결해주는 역활을 한다.
+
+loginCheck(Member member,ModelAndView mv)에서 Member member,ModelAndView mv가 매개변수이고 
+매개변수로 선언된 객체를 Command 객체라고 한다.
+
+미완성된이라는 뜻을가졌다. =  abstract
+
+서비스에서 @Service를 적어주면
+디스페쳐서블릿 bean에 자동등록해준다.
+
+@Autowired라고 쓰면 자동으로 연결 되라는 뜻이다.
+controller와 service같은걸 연결 할때 쓴다.
+
+mv.addObject("member",returnMember);
+mv.setViewName("home");
+는 member라는 이름으로 returnmember을
+home으로 보낸다는뜻이다.
