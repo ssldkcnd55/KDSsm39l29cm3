@@ -166,4 +166,8 @@ mv.setViewName("home");
 home으로 보낸다는뜻이다.
 
 <property name="dataSource" ref="dataSource">
-name은 아무거나 적어도되지만 ref는 아이디를 적어줘야한다.
+name은 아무거나 적어도되지만 ref는 참조하는 아이디를 적어줘야한다.
+
+스프링 시큐리티는 salt형식으로 랜덤으로 계속 돌아가면서 값을 계속 랜덤하게 암호화하는 암호화방식이다.
+암호화된값을 확인하려면 matches라는 메소드로 matches(참조하기를 원하는 값,암호화한값)형식으로 하면 boolean값이 나온다.
+
