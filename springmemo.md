@@ -21,7 +21,7 @@ git에서 target제외
 Window - preferences - Team - Ignored Resources - Add Pattern - */target/* 추가
 
 Help - Eclipse MarketPlace - STS검색후 설치
-
+ 
 
 프로젝트 생성
 Spring Legacy Project - 프로젝트이름은 웹루트명이며 패키지명이여서 소문자로 입력
