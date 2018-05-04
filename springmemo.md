@@ -79,6 +79,21 @@ servlet-context.xml 프론트컨트롤러에 context:component-scan
 
 ”com.kh.hello/**/controller” 이런식으로 하면 controller에서만 컴파일이 되고 dao나 service에서는 컴파일이 발생되지않아서 오류가 발생한다.
 
+필터라고 하는것인데 아래 있는 필터는 utf-8로 변환해서 한글이 깨지지 않도록 하는 필터이다.
+<filter>
+      <filter-name>encodingFilter</filter-name>
+      <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+      <init-param>
+         <param-name>encoding</param-name>
+         <param-value>utf-8</param-value>
+      </init-param>
+   </filter>
+
+   <filter-mapping>
+      <filter-name>encodingFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+   </filter-mapping>
+
 스프링에서 서블릿 단위는 메소드로 바뀌었다.
 login메소드는 로그인 logout메소드는 로그아웃
 
@@ -169,5 +184,5 @@ home으로 보낸다는뜻이다.
 name은 아무거나 적어도되지만 ref는 참조하는 아이디를 적어줘야한다..
 
 스프링 시큐리티는 salt형식으로 랜덤으로 계속 돌아가면서 값을 계속 랜덤하게 암호화하는 암호화방식이다.
-암호화된값을 확인하려면 matches라는 메소드로 matches(참조하기를 원하는 값,암호화한값)형식으로 하면 boolean값이 나온다..
-1231321
+암호화된값을 확인하려면 matches라는 메소드로 matches(참조하기를 원하는 값,암호화한값)형식으로 하면 boolean값이 나온다.
+
